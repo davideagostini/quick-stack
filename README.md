@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="QuickStack app icon" width="96" height="96">
+  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="QuickStack Logo" width="120" height="120">
 </p>
 
 # QuickStack
