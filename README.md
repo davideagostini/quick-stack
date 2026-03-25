@@ -11,7 +11,12 @@ The goal is simple: pull down Quick Settings, tap the tile, capture something us
 ## Screenshots
 
 <p align="center" width="100%">
-  <img src="docs/screenshots/quick-tile.png" alt="Quick Settings Tile" width="25%"><img src="docs/screenshots/quick-capture.png" alt="Quick Capture" width="25%"><img src="docs/screenshots/home.png" alt="Home" width="25%"><img src="docs/screenshots/settings.png" alt="Settings" width="25%"><img src="docs/screenshots/reminder-notifications.png" alt="Reminder notifications" width="25%">
+  <img src="docs/screenshots/1.png" alt="Everything in One Inbox" width="25%">
+<img src="docs/screenshots/2.png" alt="Keep It Pinned" width="25%">
+<img src="docs/screenshots/3.png" alt="Set It Your Way" width="25%">
+<img src="docs/screenshots/4.png" alt="Capture in Seconds" width="25%">
+<img src="docs/screenshots/5.png" alt="Tune your quick actions" width="25%">
+<img src="docs/screenshots/6.png" alt="One-Tap Capture" width="25%">
 </p>
 
 QuickStack currently supports:
