@@ -1,7 +1,7 @@
 <div id="user-content-toc">
   <ul style="list-style: none;">
     <summary>
-      <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="QuickStack Logo" width="120" height="120"><h1>QuickStack</h1>
+      <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="QuickStack Logo" width="120" align="left" hspace="20"><h1>QuickStack</h1>
       <p>
       <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a>
       <a href="https://kotlinlang.org"><img src="https://img.shields.io/badge/Kotlin-2.2.0%2B-blue" alt="Kotlin"></a>
