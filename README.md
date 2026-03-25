@@ -9,6 +9,8 @@
   </ul>
 </div>
 
+<br clear="left"/>
+
 QuickStack is an Android fast-capture app built around the Quick Settings Tile.
 
 The goal is simple: pull down Quick Settings, tap the tile, capture something useful in a few seconds, then get out.
