@@ -50,4 +50,21 @@
     <string name="item_meta_completed_at">Voltooid • %1$s</string>
     <string name="delete_item_title">Dit item verwijderen?</string>
     <string name="delete_item_message">Deze actie verwijdert het item uit je QuickStack-geschiedenis.</string>
+    <string name="settings_title">Instellingen</string>
+    <string name="content_desc_back">Terug</string>
+    <string name="settings_language_title">Taal</string>
+    <string name="settings_language_subtitle">Kies de taal van de app.</string>
+    <string name="settings_language_system">Systeemtaal gebruiken</string>
+    <string name="settings_time_actions_title">Tijdacties</string>
+    <string name="settings_time_actions_subtitle">Pas de snelle presets voor herinneringen en timers aan.</string>
+    <string name="settings_time_actions_summary">Over %1$d min • Vanavond %2$02d:00 • %3$d min</string>
+    <string name="settings_about_title">Info</string>
+    <string name="settings_version_title">Versie</string>
+    <string name="settings_in_one_hour_title">Actie over 1 uur</string>
+    <string name="settings_tonight_title">Actie vanavond</string>
+    <string name="settings_ten_min_title">Actie herinner me over 10 min</string>
+    <string name="settings_in_minutes_format">Over %1$d min</string>
+    <string name="settings_in_hours_format">Over %1$d uur</string>
+    <string name="settings_tonight_at_format">Vanavond om %1$02d:%2$02d</string>
+    <string name="settings_remind_me_in_minutes_format">Herinner me over %1$d min</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.davideagostini.quickstack.feature.capture
 
 import androidx.lifecycle.viewModelScope
+import android.content.Context
+import com.davideagostini.quickstack.R
 import com.davideagostini.quickstack.core.viewmodel.BaseViewModel
 import com.davideagostini.quickstack.data.repository.ClipboardRepository
 import com.davideagostini.quickstack.data.repository.QuickItemRepository
@@ -14,6 +16,7 @@ import com.davideagostini.quickstack.feature.notifications.QuickStackNotificatio
 import com.davideagostini.quickstack.feature.reminders.ReminderScheduleCalculator
 import com.davideagostini.quickstack.feature.reminders.ReminderScheduler
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -31,6 +34,7 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class CaptureViewModel @Inject constructor(
+    @param:ApplicationContext private val context: Context,
     private val quickItemRepository: QuickItemRepository,
     private val clipboardRepository: ClipboardRepository,
     private val notificationManager: QuickStackNotificationManager,
@@ -78,7 +82,7 @@ class CaptureViewModel @Inject constructor(
     private fun saveNote(pin: Boolean) {
         val text = uiState.value.noteText.trim()
         if (text.isBlank()) {
-            emitMessage("Enter a note first.")
+            emitMessage(context.getString(R.string.message_enter_note_first))
             return
         }
         createItem(
@@ -95,7 +99,7 @@ class CaptureViewModel @Inject constructor(
     private fun saveClipboard(pin: Boolean) {
         val text = clipboardRepository.readLatestText()
         if (text.isNullOrBlank()) {
-            emitMessage("Clipboard is empty or does not contain text.")
+            emitMessage(context.getString(R.string.message_clipboard_empty))
             return
         }
         createItem(
@@ -176,7 +180,7 @@ class CaptureViewModel @Inject constructor(
             if (!scheduled) {
                 quickItemRepository.deleteItem(item.id)
                 _uiState.update { it.copy(isWorking = false) }
-                emitMessage("Unable to schedule this right now.")
+                emitMessage(context.getString(R.string.message_unable_to_schedule))
                 return@launch
             }
             _uiState.update { it.copy(noteText = "", isWorking = false) }
@@ -185,11 +189,11 @@ class CaptureViewModel @Inject constructor(
     }
 
     private fun successMessage(type: QuickItemType, pinned: Boolean): String = when {
-        type == QuickItemType.TEXT_NOTE && pinned -> "Pinned note added."
-        type == QuickItemType.TEXT_NOTE -> "Note added."
-        type == QuickItemType.CLIPBOARD && pinned -> "Pinned clipboard added."
-        type == QuickItemType.CLIPBOARD -> "Clipboard saved."
-        type == QuickItemType.REMINDER -> "Reminder added."
-        else -> "${uiState.value.timerOffsetMinutes} min reminder added."
+        type == QuickItemType.TEXT_NOTE && pinned -> context.getString(R.string.message_pinned_note_added)
+        type == QuickItemType.TEXT_NOTE -> context.getString(R.string.message_note_added)
+        type == QuickItemType.CLIPBOARD && pinned -> context.getString(R.string.message_pinned_clipboard_added)
+        type == QuickItemType.CLIPBOARD -> context.getString(R.string.message_clipboard_saved)
+        type == QuickItemType.REMINDER -> context.getString(R.string.message_reminder_added)
+        else -> context.getString(R.string.message_timer_reminder_added, uiState.value.timerOffsetMinutes)
     }
 }

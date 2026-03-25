@@ -1,5 +1,7 @@
 package com.davideagostini.quickstack.feature.home
 
+import android.content.Context
+import com.davideagostini.quickstack.R
 import androidx.lifecycle.viewModelScope
 import com.davideagostini.quickstack.core.viewmodel.BaseViewModel
 import com.davideagostini.quickstack.data.repository.QuickItemRepository
@@ -8,6 +10,7 @@ import com.davideagostini.quickstack.feature.home.model.HomeState
 import com.davideagostini.quickstack.feature.notifications.QuickStackNotificationManager
 import com.davideagostini.quickstack.feature.reminders.ReminderScheduler
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -23,6 +26,7 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class HomeViewModel @Inject constructor(
+    @param:ApplicationContext private val context: Context,
     private val quickItemRepository: QuickItemRepository,
     private val notificationManager: QuickStackNotificationManager,
     private val reminderScheduler: ReminderScheduler,
@@ -47,7 +51,7 @@ class HomeViewModel @Inject constructor(
                     }
                     quickItemRepository.deleteItem(event.item.id)
                     notificationManager.cancelItemNotification(event.item.id)
-                    emitMessage("Item deleted.")
+                    emitMessage(context.getString(R.string.message_item_deleted))
                 }
                 is HomeEvent.DismissPinned -> {
                     quickItemRepository.dismissPinned(event.item.id)

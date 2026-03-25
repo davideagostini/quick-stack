@@ -1,11 +1,14 @@
 package com.davideagostini.quickstack.feature.settings
 
+import android.content.Context
+import com.davideagostini.quickstack.R
 import androidx.lifecycle.viewModelScope
 import com.davideagostini.quickstack.core.applyAppLanguage
 import com.davideagostini.quickstack.core.viewmodel.BaseViewModel
 import com.davideagostini.quickstack.data.repository.QuickStackSettingsRepository
 import com.davideagostini.quickstack.feature.settings.model.SettingsState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -15,6 +18,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
+    @param:ApplicationContext private val context: Context,
     private val settingsRepository: QuickStackSettingsRepository,
 ) : BaseViewModel() {
     private val _uiState = MutableStateFlow(SettingsState())
@@ -35,16 +39,16 @@ class SettingsViewModel @Inject constructor(
 
     fun updateReminderOffset(minutes: Int) {
         settingsRepository.updateReminderOffset(minutes)
-        emitMessage("Time actions updated.")
+        emitMessage(context.getString(R.string.message_time_actions_updated))
     }
 
     fun updateTonightHour(hour: Int) {
         settingsRepository.updateTonightTime(hour)
-        emitMessage("Time actions updated.")
+        emitMessage(context.getString(R.string.message_time_actions_updated))
     }
 
     fun updateTimerOffset(minutes: Int) {
         settingsRepository.updateTimerOffset(minutes)
-        emitMessage("Time actions updated.")
+        emitMessage(context.getString(R.string.message_time_actions_updated))
     }
 }

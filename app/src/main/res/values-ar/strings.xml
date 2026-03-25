@@ -50,4 +50,21 @@
     <string name="item_meta_completed_at">مكتمل • %1$s</string>
     <string name="delete_item_title">هل تريد حذف هذا العنصر؟</string>
     <string name="delete_item_message">سيؤدي هذا الإجراء إلى إزالة العنصر من سجل QuickStack.</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="content_desc_back">رجوع</string>
+    <string name="settings_language_title">اللغة</string>
+    <string name="settings_language_subtitle">اختر لغة التطبيق.</string>
+    <string name="settings_language_system">استخدام لغة النظام</string>
+    <string name="settings_time_actions_title">إجراءات الوقت</string>
+    <string name="settings_time_actions_subtitle">عدّل الإعدادات السريعة المستخدمة للتذكيرات والمؤقتات.</string>
+    <string name="settings_time_actions_summary">خلال %1$d دقيقة • الليلة %2$02d:00 • %3$d دقيقة</string>
+    <string name="settings_about_title">حول</string>
+    <string name="settings_version_title">الإصدار</string>
+    <string name="settings_in_one_hour_title">إجراء بعد ساعة</string>
+    <string name="settings_tonight_title">إجراء الليلة</string>
+    <string name="settings_ten_min_title">إجراء ذكّرني بعد 10 دقائق</string>
+    <string name="settings_in_minutes_format">خلال %1$d دقيقة</string>
+    <string name="settings_in_hours_format">خلال %1$d ساعة</string>
+    <string name="settings_tonight_at_format">الليلة عند %1$02d:%2$02d</string>
+    <string name="settings_remind_me_in_minutes_format">ذكّرني بعد %1$d دقيقة</string>
 </resources>

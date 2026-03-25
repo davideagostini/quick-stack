@@ -50,4 +50,21 @@
     <string name="item_meta_completed_at">Completado • %1$s</string>
     <string name="delete_item_title">¿Eliminar este elemento?</string>
     <string name="delete_item_message">Esta acción elimina el elemento del historial de QuickStack.</string>
+    <string name="settings_title">Ajustes</string>
+    <string name="content_desc_back">Atrás</string>
+    <string name="settings_language_title">Idioma</string>
+    <string name="settings_language_subtitle">Elige el idioma de la aplicación.</string>
+    <string name="settings_language_system">Usar idioma del sistema</string>
+    <string name="settings_time_actions_title">Acciones temporales</string>
+    <string name="settings_time_actions_subtitle">Ajusta los preajustes rápidos usados por recordatorios y temporizadores.</string>
+    <string name="settings_time_actions_summary">En %1$d min • Esta noche %2$02d:00 • %3$d min</string>
+    <string name="settings_about_title">Acerca de</string>
+    <string name="settings_version_title">Versión</string>
+    <string name="settings_in_one_hour_title">Acción en 1 hora</string>
+    <string name="settings_tonight_title">Acción esta noche</string>
+    <string name="settings_ten_min_title">Acción recuérdamelo en 10 min</string>
+    <string name="settings_in_minutes_format">En %1$d min</string>
+    <string name="settings_in_hours_format">En %1$d horas</string>
+    <string name="settings_tonight_at_format">Esta noche a las %1$02d:%2$02d</string>
+    <string name="settings_remind_me_in_minutes_format">Recuérdamelo en %1$d min</string>
 </resources>

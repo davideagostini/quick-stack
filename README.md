@@ -82,15 +82,74 @@ Package name:
 
 ## Project Structure
 
-- `app/src/main/java/com/davideagostini/quickstack/core`
-- `app/src/main/java/com/davideagostini/quickstack/data`
-- `app/src/main/java/com/davideagostini/quickstack/domain`
-- `app/src/main/java/com/davideagostini/quickstack/feature/capture`
-- `app/src/main/java/com/davideagostini/quickstack/feature/home`
-- `app/src/main/java/com/davideagostini/quickstack/feature/settings`
-- `app/src/main/java/com/davideagostini/quickstack/feature/notifications`
-- `app/src/main/java/com/davideagostini/quickstack/feature/reminders`
-- `app/src/main/java/com/davideagostini/quickstack/tile`
+```text
+.
+|-- app/
+|   |-- build.gradle.kts                  # Android application module
+|   |-- src/main/
+|   |   |-- AndroidManifest.xml           # Activities, receivers, tile service, permissions
+|   |   |-- java/com/davideagostini/quickstack/
+|   |   |   |-- QuickStackApp.kt          # Application class
+|   |   |   |-- MainActivity.kt           # Main launcher activity
+|   |   |   |-- core/
+|   |   |   |   |-- Localization.kt       # App locale helpers
+|   |   |   |   |-- NotificationPermission.kt
+|   |   |   |   |-- ui/                   # Theme, colors, typography, shared UI primitives
+|   |   |   |   `-- viewmodel/            # Base ViewModel abstractions
+|   |   |   |-- data/
+|   |   |   |   |-- local/
+|   |   |   |   |   |-- QuickStackDatabase.kt
+|   |   |   |   |   |-- dao/              # Room DAO interfaces
+|   |   |   |   |   `-- entity/           # Room entities and type converters
+|   |   |   |   `-- repository/           # Storage, clipboard, and settings repositories
+|   |   |   |-- di/
+|   |   |   |   `-- AppModule.kt          # Hilt dependency graph
+|   |   |   |-- domain/
+|   |   |   |   `-- model/                # Unified quick-item model, item types, drafts, sources
+|   |   |   |-- navigation/
+|   |   |   |   |-- QuickStackNavigation.kt
+|   |   |   |   `-- Screen.kt
+|   |   |   |-- feature/
+|   |   |   |   |-- capture/              # Quick capture flow from launcher/tile
+|   |   |   |   |   |-- components/       # Capture-specific composables
+|   |   |   |   |   `-- model/            # Capture UI state and events
+|   |   |   |   |-- home/                 # Inbox/history screen
+|   |   |   |   |   |-- components/       # Item rows and list UI
+|   |   |   |   |   `-- model/            # Home state and events
+|   |   |   |   |-- notifications/        # Notification actions and rendering
+|   |   |   |   |-- reminders/            # Alarm scheduling, receiver, time calculation
+|   |   |   |   `-- settings/             # Language and preset settings UI/state
+|   |   |   |       |-- components/
+|   |   |   |       `-- model/
+|   |   |   `-- tile/
+|   |   |       `-- QuickStackTileService.kt
+|   |   `-- res/
+|   |       |-- drawable/                 # App and tile assets
+|   |       |-- font/                     # Shared app font
+|   |       |-- mipmap-*/                 # Launcher icons
+|   |       `-- values*/                  # Theme, colors, strings, localized resources
+|   `-- src/test/java/com/davideagostini/quickstack/
+|       |-- domain/model/                 # Draft and item-state tests
+|       `-- feature/reminders/            # Reminder scheduling tests
+|-- gradle/libs.versions.toml             # Centralized dependency versions
+|-- build.gradle.kts                      # Root build configuration
+|-- settings.gradle.kts                   # Module includes and plugin management
+|-- CONTRIBUTING.md
+`-- README.md
+```
+
+Main package responsibilities:
+
+- `core`: shared Android/app utilities, theme system, and reusable UI/viewmodel base pieces
+- `data`: Room persistence, entity mapping, clipboard access, and settings persistence
+- `domain`: app-level models used across features without UI or storage details
+- `navigation`: top-level Compose navigation graph and route definitions
+- `feature/capture`: transparent capture surface, quick actions, and note/clipboard/reminder entry flows
+- `feature/home`: inbox/history presentation, deletion, completion, and item actions
+- `feature/notifications`: persistent and actionable notifications plus broadcast action handling
+- `feature/reminders`: reminder/timer scheduling logic built on `AlarmManager`
+- `feature/settings`: lightweight preferences UI for localization and capture presets
+- `tile`: Android Quick Settings Tile integration and tile tap entry point
 
 ## Architecture
 
@@ -176,8 +235,8 @@ This repository is published under `Apache-2.0`.
 
 ## Good First Issues
 
-- localize the settings strings in all supported languages
 - add screenshots to `docs/screenshots`
-- move remaining inline user messages into `strings.xml`
+- localize the new user-facing message strings in all supported languages
 - add more tests for Room-backed item state transitions
 - add reboot rescheduling for pending reminder/timer items
+- refine `Language` and `Time actions` screens to match the home grouped-list style more closely

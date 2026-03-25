@@ -50,4 +50,21 @@
     <string name="item_meta_completed_at">Завершено • %1$s</string>
     <string name="delete_item_title">Удалить этот элемент?</string>
     <string name="delete_item_message">Это действие удалит элемент из истории QuickStack.</string>
+    <string name="settings_title">Настройки</string>
+    <string name="content_desc_back">Назад</string>
+    <string name="settings_language_title">Язык</string>
+    <string name="settings_language_subtitle">Выберите язык приложения.</string>
+    <string name="settings_language_system">Использовать язык системы</string>
+    <string name="settings_time_actions_title">Действия по времени</string>
+    <string name="settings_time_actions_subtitle">Настройте быстрые пресеты для напоминаний и таймеров.</string>
+    <string name="settings_time_actions_summary">Через %1$d мин • Сегодня вечером %2$02d:00 • %3$d мин</string>
+    <string name="settings_about_title">О приложении</string>
+    <string name="settings_version_title">Версия</string>
+    <string name="settings_in_one_hour_title">Действие через 1 час</string>
+    <string name="settings_tonight_title">Действие сегодня вечером</string>
+    <string name="settings_ten_min_title">Действие напомнить через 10 мин</string>
+    <string name="settings_in_minutes_format">Через %1$d мин</string>
+    <string name="settings_in_hours_format">Через %1$d ч</string>
+    <string name="settings_tonight_at_format">Сегодня вечером в %1$02d:%2$02d</string>
+    <string name="settings_remind_me_in_minutes_format">Напомнить через %1$d мин</string>
 </resources>

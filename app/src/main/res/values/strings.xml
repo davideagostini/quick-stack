@@ -67,4 +67,15 @@
     <string name="settings_in_hours_format">In %1$d hours</string>
     <string name="settings_tonight_at_format">Tonight at %1$02d:%2$02d</string>
     <string name="settings_remind_me_in_minutes_format">Remind me in %1$d min</string>
+    <string name="message_enter_note_first">Enter a note first.</string>
+    <string name="message_clipboard_empty">Clipboard is empty or does not contain text.</string>
+    <string name="message_unable_to_schedule">Unable to schedule this right now.</string>
+    <string name="message_pinned_note_added">Pinned note added.</string>
+    <string name="message_note_added">Note added.</string>
+    <string name="message_pinned_clipboard_added">Pinned clipboard added.</string>
+    <string name="message_clipboard_saved">Clipboard saved.</string>
+    <string name="message_reminder_added">Reminder added.</string>
+    <string name="message_timer_reminder_added">%1$d min reminder added.</string>
+    <string name="message_time_actions_updated">Time actions updated.</string>
+    <string name="message_item_deleted">Item deleted.</string>
 </resources>

@@ -50,4 +50,21 @@
     <string name="item_meta_completed_at">已完成 • %1$s</string>
     <string name="delete_item_title">删除此项目？</string>
     <string name="delete_item_message">此操作会将该项目从 QuickStack 历史记录中移除。</string>
+    <string name="settings_title">设置</string>
+    <string name="content_desc_back">返回</string>
+    <string name="settings_language_title">语言</string>
+    <string name="settings_language_subtitle">选择应用语言。</string>
+    <string name="settings_language_system">使用系统语言</string>
+    <string name="settings_time_actions_title">时间操作</string>
+    <string name="settings_time_actions_subtitle">调整提醒和计时器使用的快速预设。</string>
+    <string name="settings_time_actions_summary">%1$d 分钟后 • 今晚 %2$02d:00 • %3$d 分钟</string>
+    <string name="settings_about_title">关于</string>
+    <string name="settings_version_title">版本</string>
+    <string name="settings_in_one_hour_title">1 小时后操作</string>
+    <string name="settings_tonight_title">今晚操作</string>
+    <string name="settings_ten_min_title">10 分钟后提醒操作</string>
+    <string name="settings_in_minutes_format">%1$d 分钟后</string>
+    <string name="settings_in_hours_format">%1$d 小时后</string>
+    <string name="settings_tonight_at_format">今晚 %1$02d:%2$02d</string>
+    <string name="settings_remind_me_in_minutes_format">%1$d 分钟后提醒我</string>
 </resources>

@@ -50,4 +50,21 @@
     <string name="item_meta_completed_at">Erledigt • %1$s</string>
     <string name="delete_item_title">Dieses Element löschen?</string>
     <string name="delete_item_message">Diese Aktion entfernt das Element aus deinem QuickStack-Verlauf.</string>
+    <string name="settings_title">Einstellungen</string>
+    <string name="content_desc_back">Zurück</string>
+    <string name="settings_language_title">Sprache</string>
+    <string name="settings_language_subtitle">Wähle die App-Sprache.</string>
+    <string name="settings_language_system">Systemsprache verwenden</string>
+    <string name="settings_time_actions_title">Zeitaktionen</string>
+    <string name="settings_time_actions_subtitle">Passe die Schnellvorgaben für Erinnerungen und Timer an.</string>
+    <string name="settings_time_actions_summary">In %1$d Min • Heute Abend %2$02d:00 • %3$d Min</string>
+    <string name="settings_about_title">Info</string>
+    <string name="settings_version_title">Version</string>
+    <string name="settings_in_one_hour_title">Aktion in 1 Stunde</string>
+    <string name="settings_tonight_title">Aktion heute Abend</string>
+    <string name="settings_ten_min_title">Aktion in 10 Min erinnern</string>
+    <string name="settings_in_minutes_format">In %1$d Min</string>
+    <string name="settings_in_hours_format">In %1$d Stunden</string>
+    <string name="settings_tonight_at_format">Heute Abend um %1$02d:%2$02d</string>
+    <string name="settings_remind_me_in_minutes_format">In %1$d Min erinnern</string>
 </resources>
