@@ -25,3 +25,9 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
+# Local maintainer docs
+docs/RELEASING.md
+AGENTS.md
+skills/
+
+skills/
