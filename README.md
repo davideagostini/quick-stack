@@ -3,6 +3,7 @@
     <summary>
       <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="QuickStack Logo" width="120" align="left" hspace="20"><h1>QuickStack</h1>
       <p>
+      <a href="https://github.com/davideagostini/quick-stack/releases/latest"><img src="https://img.shields.io/github/v/release/davideagostini/quick-stack?logo=github&labelColor=1a1a1a"></a>
       <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a>
       <a href="https://kotlinlang.org"><img src="https://img.shields.io/badge/Kotlin-2.2.0%2B-blue" alt="Kotlin"></a>
     </summary>
