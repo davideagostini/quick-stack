@@ -1,0 +1,27 @@
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Android / IDE
+.idea/
+*.iml
+local.properties
+captures/
+.DS_Store
+
+# Kotlin / Java
+*.class
+out/
+
+# Signing / local secrets
+*.jks
+*.keystore
+keystore.properties
+
+# Fastlane / screenshots / generated artifacts
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
