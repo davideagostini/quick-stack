@@ -168,19 +168,7 @@ Short, practical next steps:
 
 ## Contributing
 
-Keep changes focused and aligned with the product direction.
-
-- avoid scope creep
-- prefer small diffs
-- keep business logic out of composables
-- keep Android integration inside repositories or dedicated feature classes
-- update docs when user-visible behavior changes
-
-Before opening a PR:
-
-- run `./gradlew assembleDebug`
-- run `./gradlew testDebugUnitTest`
-- manually verify the changed flow if it touches tile, notifications, clipboard, or scheduling
+See [CONTRIBUTING.md](/Users/davideagostini/Documents/quick-stack/CONTRIBUTING.md) for contribution guidelines, branch naming, and PR title conventions.
 
 ## License
 

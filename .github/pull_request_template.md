@@ -1,3 +1,11 @@
+## PR Title Convention
+
+See `CONTRIBUTING.md`.
+
+## Branch Name Convention
+
+See `CONTRIBUTING.md`.
+
 ## Summary
 
 - 
@@ -15,4 +23,3 @@
 ## Notes
 
 - 
-
