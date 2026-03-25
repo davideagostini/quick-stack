@@ -1,8 +1,18 @@
+<p align="center">
+  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="QuickStack app icon" width="96" height="96">
+</p>
+
 # QuickStack
 
 QuickStack is an Android fast-capture app built around the Quick Settings Tile.
 
-The goal is simple: capture something useful in a few seconds, then get out.
+The goal is simple: pull down Quick Settings, tap the tile, capture something useful in a few seconds, then get out.
+
+## Screenshots
+
+<p align="center" width="100%">
+  <img src="docs/screenshots/quick-tile.png" alt="Quick Settings Tile" width="25%"><img src="docs/screenshots/quick-capture.png" alt="Quick Capture" width="25%"><img src="docs/screenshots/home.png" alt="Home" width="25%"><img src="docs/screenshots/settings.png" alt="Settings" width="25%"><img src="docs/screenshots/reminder-notifications.png" alt="Reminder notifications" width="25%">
+</p>
 
 QuickStack currently supports:
 
@@ -13,6 +23,12 @@ QuickStack currently supports:
 - a quick 10-minute reminder flow
 - a local inbox/history
 - lightweight settings for language and time-action presets
+
+## Why QuickStack
+
+- `Quick Settings Tile` first: capture starts from the fastest Android surface available
+- minimal actions: note, clipboard, reminder, and timer presets without form-heavy flows
+- local-first: everything stays on device with native Android persistence and notifications
 
 ## Status
 
@@ -54,16 +70,25 @@ QuickStack is intentionally narrow.
 
 ## Screens
 
-- `Home`: inbox/history of saved items
-- `Quick Capture`: note, clipboard, reminder, and timer entry point
-- `Settings`: language, time actions, app version
+### Quick Tile
 
-Suggested screenshot paths:
+The tile is the primary entry point. One tap opens Quick Capture directly from Quick Settings.
 
-- `docs/screenshots/home.png`
-- `docs/screenshots/quick-capture.png`
-- `docs/screenshots/settings.png`
-- `docs/screenshots/reminder-notification.png`
+### Quick Capture
+
+Full-screen fast capture for notes, clipboard actions, reminders, and timer presets.
+
+### Home
+
+Local inbox/history for saved, pinned, scheduled, and completed items.
+
+### Settings
+
+Language selection, time-action presets, and app version in a lightweight settings area.
+
+### Notifications
+
+Pinned items stay visible, while reminder and timer triggers arrive as actionable notifications.
 
 ## Tech Stack
 
@@ -144,7 +169,7 @@ Main package responsibilities:
 - `data`: Room persistence, entity mapping, clipboard access, and settings persistence
 - `domain`: app-level models used across features without UI or storage details
 - `navigation`: top-level Compose navigation graph and route definitions
-- `feature/capture`: transparent capture surface, quick actions, and note/clipboard/reminder entry flows
+- `feature/capture`: full-screen quick capture surface, quick actions, and note/clipboard/reminder entry flows
 - `feature/home`: inbox/history presentation, deletion, completion, and item actions
 - `feature/notifications`: persistent and actionable notifications plus broadcast action handling
 - `feature/reminders`: reminder/timer scheduling logic built on `AlarmManager`
@@ -235,7 +260,6 @@ This repository is published under `Apache-2.0`.
 
 ## Good First Issues
 
-- add screenshots to `docs/screenshots`
 - localize the new user-facing message strings in all supported languages
 - add more tests for Room-backed item state transitions
 - add reboot rescheduling for pending reminder/timer items
